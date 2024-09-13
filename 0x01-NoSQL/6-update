@@ -1,10 +1,5 @@
 // Add a new attribute to a document in the collection school
-db.school.bulkWrite([
-    {
-      updateMany: {
-        filter: { name: "Holberton school" },  // Query to match documents
-        update: { $set: { address: "972 Mission street" } },  // Update operation to set the address field
-        upsert: false  // No document will be inserted if none match
-      }
-    }
-  ])
+db.school.update(
+  { name: "Holberton school" },
+  { $set: { address: "972 Mission street" } }
+)
