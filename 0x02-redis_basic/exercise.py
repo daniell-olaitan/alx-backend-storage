@@ -2,7 +2,6 @@
 """
 Create a base class for cashing
 """
-from __future__ import annotations
 import uuid
 import redis
 import typing as t
@@ -12,7 +11,6 @@ class Cache:
     """
     Base class for cashing
     """
-    BaseType = t.Union[str, bytes, int, float]
     def __init__(self):
         """
         Initializes the cache class
@@ -20,7 +18,7 @@ class Cache:
         self._redis = redis.Redis()
         self._redis.flushdb()
 
-    def store(self, data: Cache.BaseType) -> str:
+    def store(self, data: t.Union[str, bytes, int, float]) -> str:
         """
         Store a given data to the cache
         """
