@@ -9,6 +9,7 @@ BEGIN
     DECLARE total_weight INT;
     DECLARE done BOOLEAN DEFAULT FALSE;
     DECLARE user_id INT;
+    DECLARE average_score FLOAT;
 
     DECLARE cur CURSOR FOR SELECT id FROM users;
     DECLARE CONTINUE HANDLER FOR NOT FOUND SET done = TRUE;

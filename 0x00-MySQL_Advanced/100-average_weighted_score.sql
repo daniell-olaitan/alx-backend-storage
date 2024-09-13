@@ -3,7 +3,7 @@
 
 DELIMITER //
 
-CREATE PROCEDURE ComputeAverageScoreForUser(IN user_id)
+CREATE PROCEDURE ComputeAverageScoreForUser(IN user_id INT)
 BEGIN
     DECLARE total_weight INT;
     DECLARE total_point FLOAT;
@@ -24,6 +24,7 @@ BEGIN
     UPDATE users
     SET average_score = average_score
     WHERE id = user_id;
+
 END //
 
 DELIMITER ;
