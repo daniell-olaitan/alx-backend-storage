@@ -8,7 +8,7 @@ def update_topics(mongo_collection, name, topics):
     """
     Change all topics of a school document based on the name
     """
-    mongo_collection.replace_one(
+    mongo_collection.update_one(
         {'name': name},
         {'topics': topics}
     )
