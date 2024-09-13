@@ -32,7 +32,7 @@ if __name__ == '__main__':
         },
         {
             '$sort': {
-                'ip_top': -1,
+                'ip_top': -1
             }
         }
     ])
