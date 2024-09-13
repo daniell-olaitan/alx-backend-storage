@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 Implement a function that lists all documents in a collection
 """
