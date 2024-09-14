@@ -110,12 +110,3 @@ class Cache:
         Get an int value from the cache
         """
         return self.get(key, fn=int)
-
-
-cache = Cache()
-
-cache.store("foo")
-cache.store("bar")
-cache.store(42)
-
-replay(cache.store)
