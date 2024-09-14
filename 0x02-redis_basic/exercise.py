@@ -34,6 +34,7 @@ def count_calls(method: t.Callable) -> t.Callable:
         Wrap a given method
         """
         self._redis.incr(method.__qualname__)
+
         return method(self, *args, **kwargs)
 
     return wrapper
