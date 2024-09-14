@@ -9,6 +9,7 @@ from functools import wraps
 
 cache = redis.Redis()
 
+
 def cache_page(fn: t.Callable) -> t.Callable:
     """
     Decorate a url fetcher function to cache the fetched page
